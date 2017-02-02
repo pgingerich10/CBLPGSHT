@@ -151,6 +151,7 @@
            05  INVENTORY-TABLE OCCURS 100 TIMES INDEXED BY IDX-INV.
                10  TBL-I-PART      PIC X(5).
                10  TBL-I-QTY       PIC 9(5).
+               10  TBL-I-COST      PIC 9(4)V99.
                10  TBL-I-SHORT     PIC S9(5).
                
        01  ORDER-FILE-DATA.
@@ -329,6 +330,7 @@
        L4-READ-INV.
            MOVE I-INV-PART TO TBL-I-PART(SUB).
            MOVE I-INV-QTY TO TBL-I-QTY(SUB).
+           MOVE I-INV-COST TO TBL-I-COST(SUB).
            ADD 1 TO SUB.
            READ INVENTORY-DATA
                AT END MOVE 'N' TO MORE-RECS.
