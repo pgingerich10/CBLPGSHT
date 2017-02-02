@@ -131,6 +131,7 @@
            05  WK-HOLD             PIC X.
            05  C-PCTR1             PIC 99          VALUE 0.
            05  C-PCTR2             PIC 99          VALUE 0.
+           05  C-CST-COST          PIC 9(8)V99     VALUE 0.
            05  MORE-RECS           PIC X           VALUE 'Y'.
                88  NO-MORE-RECS    VALUE 'N'.
            05  SUB                 PIC 9(3)        VALUE 1.
