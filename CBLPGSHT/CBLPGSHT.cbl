@@ -249,6 +249,9 @@
                    PERFORM L3-MACH-LOOP THRU L3-MACH-LOOP-EXIT
                        UNTIL TBL-M-MACHINE(SUB-M)
                            NOT EQUAL TBL-O-MACHINE(SUB-O).
+           MOVE TBL-O-MACHINE(SUB-O) TO O-CST-MACH.
+           MOVE C-CST-COST TO O-CST-COST.
+           WRITE MACHSHT-COST-LN.
            ADD 1 TO SUB-O.
        L2-MAINLINE-EXIT.
            EXIT.
