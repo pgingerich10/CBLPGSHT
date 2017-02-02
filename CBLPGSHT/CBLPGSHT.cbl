@@ -45,6 +45,10 @@
                ASSIGN TO "MACHSHT.DAT"
                ORGANIZATION IS RECORD SEQUENTIAL.
                
+           SELECT FLATOUT3
+               ASSIGN TO "MACHSHTCOST
+               ORGANIZATION IS RECORD SEQUENTIAL.
+               
        DATA DIVISION.
        FILE SECTION.
        
@@ -111,6 +115,15 @@
            05  O-MACH              PIC X(5).
            05  O-MACH-PART         PIC X(5).
            05  O-MACH-SHT          PIC 9(5).
+           
+       FD  FLATOUT3
+           LABEL RECORD IS STANDARD
+           RECORD CONTAINS 15 CHARACTERS
+           DATA RECORD IS MACHSHT-COST-LN.
+           
+       01  MACHSHT-COST-LN.
+           05  O-CST-MACH          PIC X(5).
+           05  O-CST-COST          PIC 9(8)V99.
        
        WORKING-STORAGE SECTION.
        
