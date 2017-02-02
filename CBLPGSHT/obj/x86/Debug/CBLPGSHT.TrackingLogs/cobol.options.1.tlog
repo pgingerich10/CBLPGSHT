@@ -1,0 +1,4 @@
+^C:\COBOL_III\CBLPGSHT\CBLPGSHT\CBLPGSHT.CBL
+MFCBT_Directives=int".\bin\x86\Debug\CBLPGSHT.int" dialect"MF" anim cobidy".\bin\x86\Debug\" sourcetabstop"4" noquery osext() warnings"2" max-error"100" . MFCBT_CopyPaths=
+^C:\USERS\PHILI\DESKTOP\CBLPGCST.CBL
+MFCBT_Directives=int".\bin\x86\Debug\CBLPGCST.int" anim cobidy".\bin\x86\Debug\" sourcetabstop"4" noquery osext() warnings"2" max-error"100" . MFCBT_CopyPaths=
