@@ -46,7 +46,7 @@
                ORGANIZATION IS RECORD SEQUENTIAL.
                
            SELECT FLATOUT3
-               ASSIGN TO "MACHSHTCOST
+               ASSIGN TO "MACHSHTCOST.DAT"
                ORGANIZATION IS RECORD SEQUENTIAL.
                
        DATA DIVISION.
