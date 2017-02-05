@@ -131,7 +131,7 @@
            05  WK-HOLD             PIC X.
            05  C-PCTR1             PIC 99          VALUE 0.
            05  C-PCTR2             PIC 99          VALUE 0.
-           05  C-CST-COST          PIC 9(8)V99     VALUE 0.
+           05  C-CST-COST          PIC S9(8)V99     VALUE 0.
            05  MORE-RECS           PIC X           VALUE 'Y'.
                88  NO-MORE-RECS    VALUE 'N'.
            05  SUB                 PIC 9(3)        VALUE 1.
@@ -253,6 +253,7 @@
            MOVE TBL-O-MACHINE(SUB-O) TO O-CST-MACH.
            MOVE C-CST-COST TO O-CST-COST.
            WRITE MACHSHT-COST-LN.
+           MOVE ZEROS TO C-CST-COST.
            ADD 1 TO SUB-O.
        L2-MAINLINE-EXIT.
            EXIT.
@@ -352,6 +353,9 @@
                (TBL-O-QTY(SUB-O) * TBL-M-QTY(SUB-M)).
            IF TBL-M-SHORT(SUB-M) IS NEGATIVE
                PERFORM L5-MOVES THRU L5-MOVES-EXIT
+               COMPUTE C-CST-COST = C-CST-COST +
+                   (TBL-M-SHORT(SUB-M) * TBL-I-COST(IDX-INV))
+               END-COMPUTE
                ADD TBL-M-SHORT(SUB-M) TO TBL-I-SHORT(IDX-INV)
            END-IF.
        L4-DETAIL-EXIT.
